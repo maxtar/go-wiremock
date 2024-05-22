@@ -52,7 +52,7 @@ func (c *Client) StubFor(stubRule *StubRule) error {
 func (c *Client) Clear() error {
 	req, err := http.NewRequest(http.MethodDelete, fmt.Sprintf("%s/%s", c.url, wiremockAdminMappingsURN), nil)
 	if err != nil {
-		return fmt.Errorf("build cleare Request error: %s", err.Error())
+		return fmt.Errorf("build clear Request error: %s", err.Error())
 	}
 
 	res, err := (&http.Client{}).Do(req)
